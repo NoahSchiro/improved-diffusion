@@ -6,9 +6,9 @@
 # Time saving tips
 # --use_ddim true can provide a 10-50x speed up but sacrifices quality somewhat
 
-MODEL_FLAGS="--image_size 64 --num_channels 128 --num_res_blocks 3 --use_checkpoint true --log_interval 100 --save_interval 10000 --use_fp16 true"
+MODEL_FLAGS="--image_size 256 --num_channels 128 --num_res_blocks 3 --log_interval 100 --save_interval 1000 --use_fp16 true"
 DIFFUSION_FLAGS="--diffusion_steps 1000 --noise_schedule linear"
-TRAIN_FLAGS="--lr 1e-4 --batch_size 128 --microbatch 4"
+TRAIN_FLAGS="--lr 1e-4 --batch_size 32 --microbatch 2"
 
 DATA_DIR="/home/noah/Work/diffusion/data/"
 
